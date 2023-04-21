@@ -40,6 +40,8 @@ When editing your `wp-config.php` file, it is important that `WP_REDIS_*` consta
 require_once(ABSPATH . 'wp-settings.php');
 ```
 
+Some users have reported critical errrors when they enable the cache without both (a) modifying wp-config.php (as above) first and (b) restarting Apache.  For users running Wordpress in a docker container, restarting apache can be accomplished by using "docker exec" commands or by bringing docker down / back up. 
+
 For more connection examples see [Connections](https://github.com/rhubarbgroup/redis-cache/#connections) and [Scaling](https://github.com/rhubarbgroup/redis-cache/#scaling) sections.
 
 ## Composer instructions
